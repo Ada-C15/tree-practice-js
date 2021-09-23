@@ -1,3 +1,3 @@
 #!/bin/bash
-ls lib
+cat lib/tree.js
 npm run test
