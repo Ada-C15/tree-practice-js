@@ -1,4 +1,4 @@
-const Tree = require("../lib/tree.js");
+const Tree = require("../lib/tree");
 
 
 
