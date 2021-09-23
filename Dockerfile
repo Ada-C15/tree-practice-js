@@ -7,7 +7,7 @@ RUN npm install
 
 ARG SUBMISSION_SUBFOLDER
 COPY $SUBMISSION_SUBFOLDER .
-COPY test .
+COPY test /app/test
 # COPY . .
 
 RUN chmod +x /app/test.sh
