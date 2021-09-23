@@ -13,7 +13,8 @@ RUN npm ci
 ARG SUBMISSION_SUBFOLDER
 ADD $SUBMISSION_SUBFOLDER /app
 
-COPY test .
+COPY test /app
+COPY test.sh /app
 
 RUN chmod +x /app/test.sh
 
