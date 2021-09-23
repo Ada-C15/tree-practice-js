@@ -1,21 +1,12 @@
-# Install latest version of node (older versions are not guaranteed to work with Learn)
-FROM node:14.15.4
+FROM node:14
 
 WORKDIR /app
 
 COPY package.json .
-
 RUN npm install
-RUN npm ci
-#  For testing
-# COPY . .
 
 ARG SUBMISSION_SUBFOLDER
-ADD $SUBMISSION_SUBFOLDER /app
-
-COPY test /app
-COPY test.sh /app
+COPY $SUBMISSION_SUBFOLDER .
+# COPY . .
 
 RUN chmod +x /app/test.sh
-
-CMD [ "npm", "run", "test" ]
